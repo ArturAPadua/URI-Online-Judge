@@ -125,20 +125,21 @@ if (num_candidatos >= 1 && num_candidatos <= 100)
                 }
             }
 
-            if (b > 0 && num_candidatos - cont == 1 && vetor_poder[cont] == maior_poder && vetor_kills[cont] == maior_kills && vetor_mortes[cont] == menos_mortes)
+        }
+        if (b > 0)
+        {
+            for (d = 0; d < num_candidatos; d++)
             {
-                for (d = 0; d < num_candidatos; d++)
+                if (vetor_poder[d] == maior_poder && vetor_kills[d] == maior_kills && vetor_mortes[d] == menos_mortes)
                 {
-                    if (vetor_poder[d] == maior_poder && vetor_kills[d] == maior_kills && vetor_mortes[d] == menos_mortes)
-                    {
-                        vetor_sort[c] = vetor_nome[d];
-                        c++;
-                        vetor_sort.sort();
-                        vitorioso = vetor_sort[0];
-                    }
+                    vetor_sort[c] = vetor_nome[d];
+                    c++;
+                    vetor_sort.sort();
+                    vitorioso = vetor_sort[0];
                 }
             }
         }
+
         console.log(vitorioso);
     }
 }
