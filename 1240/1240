@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Desafio_1240
+namespace 1240
 {
 
-    class Program
-    {
+	class Program
+	{
 		public int Length { get; }
 		static void Main(string[] args)
-        {
+		{
 
 			int i, n, tamA, tamB, t, z;
 			string a, b;
@@ -19,20 +19,20 @@ namespace Desafio_1240
 			n = int.Parse(Console.ReadLine());
 			for (i = 0; i  n; i++)
 			{
-                string[] vet = Console.ReadLine().Split(' ');
-                a = vet[0];
-                b = vet[1];
+				string[] vet = Console.ReadLine().Split(' ');
+				a = vet[0];
+				b = vet[1];
 
-                t = 0;
+				t = 0;
 				tamA = a.Length;
 				tamB = b.Length;
-				
+
 				if (a.Contains(b) == false){
-                    Console.WriteLine(nao encaixan);
-                } 
+					Console.WriteLine(nao encaixan);
+				} 
 				else if (tamB  tamA){
-                    Console.WriteLine(encaixan);
-                }
+					Console.WriteLine(encaixan);
+				}
 				else
 				{
 					for (z = 0; z = 0; z++)
@@ -41,8 +41,8 @@ namespace Desafio_1240
 						{
 							t = 1;
 							if (b[tamB] == 0){
-                                break;
-                            }
+								break;
+							}
 						}
 						else
 						{
@@ -50,12 +50,12 @@ namespace Desafio_1240
 							break;
 						}
 						if (tamB == 0){
-                            break;
-                        } 
+							break;
+						} 
 					}
 					if (t == 0)
 					{
-                        Console.WriteLine(nao encaixan);
+						Console.WriteLine(nao encaixan);
 					}
 					else if (t == 1)
 					{
@@ -64,5 +64,5 @@ namespace Desafio_1240
 				}
 			}
 		}
-    }
+	}
 }
