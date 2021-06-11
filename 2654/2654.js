@@ -1,4 +1,4 @@
-var input = require('fs').readFileSync('stdin', 'utf8');
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
 var lines = input.split('\n');
 
 var maior_kills = 0, maior_poder = 0, menos_mortes = 101, num_candidatos = 0, cont = 0, a = 0, b = 0, c = 0, d = 0;
